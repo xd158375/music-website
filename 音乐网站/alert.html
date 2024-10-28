@@ -1,0 +1,37 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Custom Alert</title>  
+    <link rel="stylesheet" href="CSS/alert.css" type="text/css">
+</head>  
+<body>    
+<!--    <button id="visible">显示</button>-->
+    <div id="customAlert" class="alert hidden"> 
+        <!--弹窗本体-->
+        <div class="alert-content" >  
+            <!--叠加层，虚化朦胧效果-->
+            <div class="overlay">
+                <div class="circle"></div>
+            </div> 
+            <div id="Confirm">
+                <svg viewBox="0 0 80 80">
+                    <circle class="st0" cx="22.5" cy="41.7" r="3.7" style="fill:#ABB4CB;"/>
+                    <rect x="20.2" y="44.2" transform="matrix(0.7071 0.7071 -0.7071 0.7071 42.2729 -6.2444)" class="st0" width="17" height="7.4" style="fill:#ABB4CB;"/>
+                    <rect x="30.3" y="37.8" transform="matrix(-0.7231 0.6907 -0.6907 -0.7231 111.6713 38.3333)" class="st0" width="35.8" height="7.4" style="fill:#ABB4CB;"/>
+                    <circle class="st0" cx="34.9" cy="54.2" r="3.7" style="fill:#ABB4CB;"/>
+                    <circle class="st0" cx="60.7" cy="29.5" r="3.7" style="fill:#ABB4CB;"/>
+                </svg>
+            </div>
+            <div id="main_font">
+                <!--<h3>Welcome to our website!</h3>
+                <p>In this vast crowd of people, we have met here. <br>Next, I would like to invite you to visit our website.</p>-->
+            </div>
+            <button type="button" id="start_button">Get Started</button>
+        </div>  
+    </div>  
+    
+</body> 
+<script src="JavaScript/alert.js"></script>
+</html>

@@ -1,0 +1,446 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>个人界面</title>
+<link rel="stylesheet" href="CSS/Personal.css" type="text/css"/>  
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body>
+<!---------------------------------导航元素----------------------------------->
+<div class="header">
+    <div class="LOGO"><a href="star.html"><img src="images/LOGO.png" alt="LOGO"></a></div>
+    <div class="nav1"> 
+        <a href="HomePage.html" class="a-color">首页</a>
+        <a href="tuijian.html" class="a-color">推荐</a>
+        <a href="#" class="a-color">个性电台</a>
+        <a href="#" class="a-color">歌手</a>
+        <a href="Personal.html" class="a-color">我的</a>
+    </div>
+    <div class="signin">
+        <a href="Sign in.html" class="a-color">登录</a>
+        <span>||</span>
+        <a href="Sign up.html" class="a-color">注册</a>
+    </div>
+<!-------------------------------------------------白天黑夜切换按钮---------------------------------------------->
+    <div class="components">
+			<!-- 组件所有元素 -->
+        <div class="main-button">
+				<!-- 按钮主体(圆) -->
+        <div class="moon"></div>
+        <div class="moon"></div>
+        <div class="moon"></div>
+				<!-- 月亮上的陨石坑 -->
+        </div>
+        <div class="daytime-backgrond"></div>
+        <div class="daytime-backgrond"></div>
+        <div class="daytime-backgrond"></div>
+        <!-- 按钮底层的三个虚影 -->
+        <div class="cloud">
+            <!-- 所有的云 -->
+            <div class="cloud-son"></div>
+            <div class="cloud-son"></div>
+            <div class="cloud-son"></div>
+            <div class="cloud-son"></div>
+            <div class="cloud-son"></div>
+            <div class="cloud-son"></div>
+        </div>
+        <div class="cloud-light cloud-float">
+            <!-- 云的虚影 -->
+            <div class="cloud-son"></div>
+            <div class="cloud-son"></div>
+            <div class="cloud-son"></div>
+            <div class="cloud-son"></div>
+            <div class="cloud-son"></div>
+            <div class="cloud-son"></div>
+        </div>
+        <div class="stars">
+            <!-- 所有星星，每一个星星由四个div拼合而成 -->
+            <div class="star big">
+                <div class="star-son"></div>
+                <div class="star-son"></div>
+                <div class="star-son"></div>
+                <div class="star-son"></div>
+            </div>
+            <div class="star big">
+                <div class="star-son"></div>
+                <div class="star-son"></div>
+                <div class="star-son"></div>
+                <div class="star-son"></div>
+            </div>
+            <div class="star medium">
+                <div class="star-son"></div>
+                <div class="star-son"></div>
+                <div class="star-son"></div>
+                <div class="star-son"></div>
+            </div>
+            <div class="star medium">
+                <div class="star-son"></div>
+                <div class="star-son"></div>
+                <div class="star-son"></div>
+                <div class="star-son"></div>
+            </div>
+            <div class="star medium">
+                <div class="star-son"></div>
+                <div class="star-son"></div>
+                <div class="star-son"></div>
+                <div class="star-son"></div>
+            </div>
+            <div class="star small">
+                <div class="star-son"></div>
+                <div class="star-son"></div>
+                <div class="star-son"></div>
+                <div class="star-son"></div>
+            </div>
+            <div class="star small">
+                <div class="star-son"></div>
+                <div class="star-son"></div>
+                <div class="star-son"></div>
+                <div class="star-son"></div>
+            </div>
+            <div class="star small">
+                <div class="star-son"></div>
+                <div class="star-son"></div>
+                <div class="star-son"></div>
+                <div class="star-son"></div>
+            </div>
+            <div class="star small">
+                <div class="star-son"></div>
+                <div class="star-son"></div>
+                <div class="star-son"></div>
+                <div class="star-son"></div>
+            </div>
+            <div class="star small">
+                <div class="star-son"></div>
+                <div class="star-son"></div>
+                <div class="star-son"></div>
+                <div class="star-son"></div>
+            </div>
+            <div class="star small">
+                <div class="star-son"></div>
+                <div class="star-son"></div>
+                <div class="star-son"></div>
+                <div class="star-son"></div>
+				</div>
+			</div>
+		</div>
+		
+<!---------------------------------------------------动态搜索框------------------------------------------------->
+    <div class="searchBar">
+        <div class="icon1">
+            <img src="images/search.png" alt="搜索">
+        </div>
+        <div class="textInput">
+            <input class="inp" type="text" placeholder="请输入搜索关键字">
+            <button class="goBtn">GO</button>
+            <div class="clear"><img src="images/close.png" alt="删除"></div>
+        </div>
+    </div>   <!-- 整个容器分成2部分搜索图标和展开区域 -->
+
+</div>
+<!------------------------------------------------------------动态侧边栏-------------------------------------------------------->
+ <div class="wrap">
+    <!---主体--->
+    <div class="nav">    
+          <!--头像-->
+            <div class="icon">
+                <div class="icon-img">
+					<img src="images/images (3).png" alt="" />
+				</div>
+                <div class="icon-con">
+                    <p class="a-color">美美</p>
+                    <h2 class="a-color">明天也早起</h2>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="title"> 
+                <p class="a-color">Menu</p>
+            </div>
+            <div class="menu">
+                <div class="item">
+                    <div id="Files" class="Sidebar_height">
+                        <div class="licon"><a href="#"><img src="images/wenjian.png" alt="文件"></a></div>
+                        <div class="con"><a href="#" class="a-color">Files</a></div>
+                        <div class="ricon"><span class="iconfont icon-shezhi"></span></div>  
+                    </div>
+                    <ul class="Files Level_2">
+                        <span class="Sidebar_font">Files</span>
+                        <li>戒不掉.MP3</li>
+                        <li>哪里都是你.MP3</li>
+                        <li>银河与星斗.MP3</li>
+                        <li>Payphone.MP3</li>
+                        <li>在加纳共和国离婚.MP3</li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <div id="Chat" class="Sidebar_height">
+                        <div class="licon"><a href="#"><img src="images/qipao.png" alt="聊天"></a></div>
+                        <div class="con"><a href="#" class="a-color">Chat</a></div>
+                        <div class="ricon"><span class="icosnfont icon-shezhi"></span></div>
+                    </div>
+                    <ul class="Chat Level_2">
+                        <span class="Sidebar_font">Chat</span>
+                        <li>User A</li>
+                        <li>User B</li>
+                        <li>User C</li>
+                        <li>User D</li>
+                        <li>User E</li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <div id="Videos" class="Sidebar_height">
+                        <div class="licon"><a href="#"><img src="images/shexiangtou.png" alt="视频"></a></div>
+                        <div class="con"><a href="#" class="a-color">Videos</a></div>
+                        <div class="ricon"></div>    
+                    </div>
+                    <ul class="Videos Level_2">
+                        <span class="Sidebar_font">Videos</span>
+                        <li>戒不掉.MP4</li>
+                        <li>哪里都是你.MP4</li>
+                        <li>银河与星斗.MP4</li>
+                        <li>Payphone.MP4</li>
+                        <li>在加纳共和国离婚.MP4</li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <div id="Collect" class="Sidebar_height">
+                        <div class="licon"><a href="#"><img src="images/shoucang.png" alt="收藏"></a></div>
+                        <div class="con"><a href="#" class="a-color">Collect</a></div>
+                        <div class="ricon"><span class="iconfont icon-caidan1"></span></div>
+                    </div>
+                    <ul class="Collect Level_2">
+                        <span class="Sidebar_font">Collect</span>
+                        <li>戒不掉.MP3</li>
+                        <li>哪里都是你.MP3</li>
+                        <li>银河与星斗.MP3</li>
+                        <li>Payphone.MP3</li>
+                        <li>在加纳共和国离婚.MP3</li>
+                        <li>爱你的时候.MP3</li>
+                        <li>春娇与志明.MP3</li>
+                        <li>暖风.MP3</li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <div id="Search" class="Sidebar_height">
+                        <div class="licon"><a href="#"><img src="images/search1.png" alt="搜索"></a></div>
+                        <div class="con"><a href="#" class="a-color">Search</a></div>
+                        <div class="ricon"></div>
+                    </div>
+                    <ul class="Search Level_2">
+                        <span class="Sidebar_font">Search</span>
+                        <li>戒不掉.MP3</li>
+                        <li>哪里都是你.MP3</li>
+                        <li>银河与星斗.MP3</li>
+                        <li>Payphone.MP3</li>
+                        <li>在加纳共和国离婚.MP3</li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <div id="Share" class="Sidebar_height">
+                        <div class="licon"><a href="#"><img src="images/share.png" alt="分享"></a></div>
+                        <div class="con"><a href="#" class="a-color">Share</a></div>
+                        <div class="ricon"></div>
+                    </div>
+                    <ul class="Share Level_2">
+                        <span class="Sidebar_font">Share</span>
+                        <li>戒不掉.MP3</li>
+                        <li>哪里都是你.MP3</li>
+                        <li>银河与星斗.MP3</li>
+                        <li>Payphone.MP3</li>
+                        <li>在加纳共和国离婚.MP3</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="title">
+                <p class="a-color">Sever</p>
+            </div>
+            <div class="serve">
+                <div class="item">
+                    <div id="Option" class="Sidebar_height">
+                        <div class="licon"><a href="#"><img src="images/xuanxiang.png" alt="选项"></a></div>
+                        <div class="con"><a href="#" class="a-color">Option</a></div>
+                        <div class="ricon"><span class="iconfont icon-Dashboard"></span></div>
+                    </div>
+
+                </div>
+                <div class="item">
+                    <div id="Friends" class="Sidebar_height">
+                        <div class="licon"><a href="#"><img src="images/people.png" alt="好友"></a></div>
+                        <div class="con"><a href="#" class="a-color">Friends</a></div>
+                        <div class="ricon"></div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div id="Setting" class="Sidebar_height">
+                        <div class="licon"><a href="#"><img src="images/setting.png" alt="设置"></a></div>
+                        <div class="con"><a href="#" class="a-color">Setting</a></div>
+                        <div class="ricon"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!----------------------------------------------------------个人界面---------------------------------------------------------------------------->
+<div class="personal">
+    <div class="touxiang">  <!--头像-->
+        <div class="head-photo">
+            <img src="images/profile photo.png" alt="头像">
+        </div>
+    </div>
+    <div class="user">  <!--昵称-->
+        <div class="name">
+            <h1>美美</h1>
+            <p>明天也早起</p>
+            <hr size="2.5" color="rgba(48,48,48,1.00)">
+            <div class="code">
+                <img src="images/er'wei code.png" alt="er'wei code">        <!--二维码-->
+                <img src="images/jiantou.png" alt="jiantou">
+            </div>
+            <div class="icons">
+                <ul>
+                    <li><img src="images/male.png" alt="male"></li>
+                    <li><img src="images/VIP-1.png" alt="VIP-1"></li>                    
+                    <li><img src="images/S13.png" alt="音响力等级"></li>
+                    <li><img src="images/music-time.png" alt="音乐时长"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="information">                                           <!--默认隐藏信息-->
+            <p>男 00后 射手座&#8226;湖北荆州&#8226;学生</p>
+            <hr size="2.5" color="rgba(48,48,48,1.00)">
+            <button id="button1" class="button" onclick="changeColor(this)">尊贵的LV10用户</button>
+            <button id="button2" class="button" onclick="changeColor(this)">卧室K歌爱好者</button>
+            <button id="button3" class="button" onclick="changeColor(this)">学生党</button>
+            <button id="button4" class="button" onclick="changeColor(this)">持续失眠中</button>
+            <button id="button5" class="button" onclick="changeColor(this)">做自己的宇宙</button>
+            <button id="button6" class="button" onclick="changeColor(this)">暴富</button>
+        </div>
+    </div>
+    <div class="content">
+        <div class="visitors">
+            <ul>
+                <li><a href="">&nbsp;关注&nbsp;</a><a href="" class="number">&nbsp;31</a>&nbsp;||</li>
+                <li><a href="">&nbsp;粉丝&nbsp;</a><a href="" class="number">&nbsp;9999</a>&nbsp;||</li>
+                <li><a href="">&nbsp;好友&nbsp;</a><a href="" class="number">&nbsp;121</a>&nbsp;||</li>
+                <li><a href="">&nbsp;访客&nbsp;</a><a href="" class="number">&nbsp;9999</a>&nbsp;</li>
+            </ul>
+        </div>
+        <hr size="2.5" color="rgba(48,48,48,1.00)">
+        <div class="collect">
+            <a href=""><div class="like">喜欢的音乐</div></a>
+                <div class="Straight-line-1"></div>
+            <a href=""><div class="song-list">创建的歌单</div></a>
+                <div class="Straight-line-2"></div>
+            <a href=""><div class="download">本地与下载</div></a>
+                <div class="Straight-line-3"></div>
+            <a href=""><div class="recent-playlist">最近播放表</div></a>
+        </div>
+    </div>
+    <div class="contact">
+        <div class="digital-garden transition" id="garden">
+            <p>Welcome</p>
+            <p>Hello,<br>欢迎来到&nbsp;明天也早起&nbsp;的<br>数字花园</p>
+            <img src="images/tiaozhuan.png" alt="跳转" class="jump">
+        </div>
+        <div class="Blog transition" id="Blog">
+            <img src="images/Blog.png" alt="博客" id="Blog-img">
+            <p class="text">Blog</p>
+
+            <img src="images/tiaozhuan.png" alt="跳转" class="jump">
+        </div>
+        <div class="weichat transition" id="weichat">                                                        <!-- class="transition"--><!--缩小布局-->
+            <img src="images/weixin.png" alt="微信" id="weichat-img">
+            <!--<img src="SVG/weichat.svg" alt="微信" id="weichat-img">-->
+            <p class="text">微信</p>
+            <img src="images/tiaozhuan.png" alt="跳转" class="tiaozhuan">
+        </div>
+        <div class="QQ transition" id="QQ">
+            <img src="images/QQ.png" alt="QQ" id="QQ-img">
+            <p class="text">QQ</p>
+            <img src="images/tiaozhuan.png" alt="跳转" class="tiaozhuan">
+        </div>
+        <div class="douyin transition" id="Tiktok">
+            <img src="images/douyin.png" alt="抖音" id="Tiktok-img">
+            <p class="text">抖音</p>
+            <img src="images/tiaozhuan.png" alt="跳转" class="tiaozhuan">
+        </div>
+        <div class="tuite transition" id="tuite">
+            <img src="images/tuite.png" alt="推特" id="tuite-img">
+            <p class="text">推特</p>
+            <img src="images/tiaozhuan.png" alt="跳转" class="tiaozhuan">
+        </div>
+        <div class="youxiang transition" id="youxiang"> 
+            <img src="images/youxiang.png" alt="邮箱" id="youxiang-img">
+            <p class="text">邮箱</p>
+            <img src="images/tiaozhuan.png" alt="跳转" class="tiaozhuan">
+        </div>
+        <div class="weibo transition" id="weibo">
+            <img src="images/weibo.png" alt="微博" id="weibo-img">
+            <p class="text">微博</p>
+            <img src="images/tiaozhuan.png" alt="跳转" class="tiaozhuan">
+        </div>
+    </div>
+	<div class="song-background">
+		
+	</div>
+</div>
+<!--------------------------------------------------------------------阴影蒙版------------------------------------------------------------------------------->
+<div id="overlay" class="overlay">
+	<div id="container">
+    	<svg id="hello-svg" data-name="hello" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 582 197">
+			
+			<lineargradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+				<stop offset="0%" style="stop-color:#facaa9;stop-opacity:1" />  
+      			<stop offset="20%" style="stop-color:#ca9a96;stop-opacity:1" />  
+      			<stop offset="40%" style="stop-color:#8d7e95;stop-opacity:1" />
+				<stop offset="60%" style="stop-color:#56648a;stop-opacity:1" />
+			</lineargradient>
+			<lineargradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+				<stop offset="60%" style="stop-color:#56648a;stop-opacity:1" />
+      			<stop offset="80%" style="stop-color:#6280a5;stop-opacity:1" />
+			</lineargradient>
+			<lineargradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      			<stop offset="80%" style="stop-color:#6280a5;stop-opacity:1" />
+				<stop offset="100%" style="stop-color:#8ca5c0;stop-opacity:1" />
+			</lineargradient>
+			<lineargradient id="grad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      			<stop offset="100%" style="stop-color:#8ca5c0;stop-opacity:1" />	
+			</lineargradient>
+			
+        	<path class="path path-1" d="M208,338c38-16.67,73.74-45.72,97.33-66,21.33-18.33,32.67-35.67,37.33-52.67C347.12,203.12,344,192,332,192c-11,0-21,10.33-24.94,27.68-4.52,19.89-22.06,107.82-29.39,149,15.67-72.33,36.33-81.33,53.67-81.33,22.33,0,24.67,18.67,19.42,39-5.43,21.07-7.42,44.32,17.91,44.32,18,0,35.53-8.17,52.67-20,14-9.67,23-24,23-40,0-13.42-8-23.33-20.67-23.33s-24.33,12-24.33,33.33c0,27,16.33,48,44,48,25.67,0,47.67-19.67,62-44.67,13.61-23.74,30.67-64.67,33.33-92.67s-5.33-36-18.67-36-24.67,17.33-28.67,43.33S486,302,491.33,330s28,37.67,46,37.67,38.17-15.67,52-37c16.54-25.51,35.87-67.45,38.67-102,2-24.67-8.67-33.33-20-33.33-14.67,0-23.33,13.33-28,38-4.5,23.81-8,64-2,94,4.64,23.21,25.33,40.33,44.67,40.33s32.67-19,36.67-42.33" transform="translate(-199 -183)" style="stroke:url(#grad1)"/>
+        	<path class="path path-2" d="M697.33,287.33C672,287.33,661.33,305,659,327c-2.81,26.54,10.33,41.67,29.67,41.67,22,0,34.54-20.78,36.67-40.67,2-18.67-7.39-39.13-28-40.67" transform="translate(-199 -183)" style="stroke:url(#grad2)"/>
+        	<path class="path path-3" d="M714.8,295.12c12.11,12.26,43.53,9.55,56.53-5.79" transform="translate(-199 -183)" style="stroke:url(#grad3)"/>
+        	<line class="path path-4" x1="561" y1="181.67" x2="561" y2="181.67"/>
+    	</svg>
+        <div id="svg-text">
+            <div class="top-div" style="transform: translateX(0%);"></div> 
+            <div class="bottom-div">
+                <p id="designer-name">I`m Xuding </p>
+                <p id="designer-work">A UI designer</p>
+            </div>
+        </div>
+	</div>
+	<div id="svg-headphoto">
+		<img src="images/profile photo.png" alt="头像" id="headphoto">
+	</div>
+	<div id="svg-jiantou">
+		<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.29 35.29">
+			<path d="M10.85,16.85c2.67-2.67,5.33-5.33,8-8c-0.71,0-1.41,0-2.12,0c2.67,2.67,5.33,5.33,8,8c1.37,1.37,3.49-0.75,2.12-2.12
+				c-2.67-2.67-5.33-5.33-8-8c-0.57-0.57-1.55-0.57-2.12,0c-2.67,2.67-5.33,5.33-8,8C7.37,16.1,9.49,18.22,10.85,16.85L10.85,16.85z"/>
+			<path d="M10.85,28.85c2.67-2.33,5.33-4.67,8-7c-0.71,0-1.41,0-2.12,0c2.67,2.33,5.33,4.67,8,7c1.45,1.27,3.58-0.85,2.12-2.12
+				c-2.67-2.33-5.33-4.67-8-7c-0.64-0.56-1.48-0.56-2.12,0c-2.67,2.33-5.33,4.67-8,7C7.28,28.01,9.41,30.12,10.85,28.85L10.85,28.85z"/>
+		</svg>
+	</div>
+	
+</div>  	
+	
+	
+	
+	
+</body>
+<script src="JavaScript/Sidebar.js"></script>
+<script src="JavaScript/search.js"></script>
+<script type="text/javascript" src="JavaScript/mouse.js"></script>
+</html>

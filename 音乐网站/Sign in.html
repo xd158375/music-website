@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link type="text/css" href="CSS/Sign in.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <!--登录账户-->
+        
+        <div id="login-in" class="login">
+            <h1>Login Account</h1>
+            <form class="login_form" id="login-in_form">
+                <input type="text" placeholder="Account" id="username" required autocomplete="off">
+                <input type="password" placeholder="Password" id="password" required autocomplete="off">
+                <a href="#">Forget Password？</a>
+                <button type="button" id="Login_in_button">Sign in</button>          <!-- onClick="verify()"-->
+                <!--要么使用<input type="submit、button">要么在button后面加type="button"。否则重定向不成功-->
+            </form>
+        </div> 
+        
+        <!--注册账户-->
+        <div id="login-up" class="login">
+            <h1>Create Account</h1>
+            <form class="login_form" id="login-up_form">
+                <input type="text" placeholder="Account" id="new_username" required autocomplete="off">
+                <input type="email" placeholder="Eamil" id="new_email" required autocomplete="off">
+                <input type="password" placeholder="Password" id="new_password" required autocomplete="off">
+                <button type="button" id="Login_up_button" onClick="addAccount()">Sign up</button>
+            </form>
+        </div>
+        
+        <!--叠加层部分-->
+        <div id="overlay">
+            <!--圆球-->
+            <div id="circle_1"></div>
+            <div id="circle_2"></div>
+            <!--注册叠加层，在Sign in-->
+            <div id="overlay_signup" class="overlays">
+                <div class="Overlay_font">
+                    <h1>Hello！</h1><br>
+                    <p>欢迎回来<br>请输入你的账号，开启我们的旅程</p>
+                </div>
+                <button class="toggle" id="toggleToSignup">Sign up</button>
+            </div>
+             <!--登录叠加层，在Sign up-->
+            <div id="overlay_signin" class="overlays">
+                <div class="Overlay_font">
+                    <h1>Hello！</h1><br>
+                    <p>初次见面<br>请输入你的信息开始我们接下来的旅程吧</p>
+                </div>
+                <button class="toggle" id="toggleToSignin">Sign in</button>
+            </div>
+        </div>
+    </div>
+    <div id="iframe-container"></div>
+</body>
+<script src="JavaScript/Sign.js"></script>
+<script src="JavaScript/Sign in.js"></script>
+</html>

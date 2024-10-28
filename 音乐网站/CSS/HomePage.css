@@ -1,0 +1,922 @@
+@charset "utf-8";
+/* CSS Document */
+html{
+	font-size: 62.5%;   /* 	62.5% = 1rem = 10px  */
+}
+*{margin:0; padding:0;transition: 0.7s;}
+body{
+	background:url(../images/qianse.png) repeat-y;
+}
+
+/********************************导航元素*************************************/
+.header{
+	width:100%;    /*width:1512px;*/
+	height:78px;
+	background:#505f6e; 
+	margin-top:-15px;
+}
+.LOGO{
+    width:auto;
+    height:60px;
+    position:absolute;
+    left:220px;
+    top:10px;	  
+}
+
+.nav1{
+    width:auto;
+    height:4.5rem;
+    position:absolute;
+    left:37.5rem;
+    top:1.5rem;
+    text-align:left;
+    padding-top:8px;
+    padding-bottom:0;
+}
+.nav1 a{
+	margin-right:1.9rem;
+    font-size:2.5rem;	   
+}
+
+.a-color{
+	color:#353c48;
+	font-size: 1.6rem;
+}
+.signin{
+    width:auto;
+    height:3rem;
+    position:absolute;
+    right:3rem;
+    top:2.5rem;
+} 
+a:link,a:visited{
+    text-decoration:none;
+}
+a:hover{
+    color:#9CF;
+    text-decoration:none;
+}
+/****************************************白天黑夜切换按钮*************************************************/
+/* 最外层元素样式 */
+.components{
+	position:absolute;/* 固定定位 */
+	top:3.3rem;
+	left:6.66rem;
+	margin-left:-6rem;
+	margin-top: -2.23rem;/* 按钮在页面中居中 */
+	width: 12rem;
+	height: 4.66rem;
+	background-color: rgba(70, 133, 192,1);/* 按钮背景颜色 */
+	border-radius: 6.6rem;
+	box-shadow: inset 0 0 3.3px 2px rgba(0, 0, 0, 0.5);/* 按钮的内阴影,实现立体感 */
+	overflow: hidden;
+	transition: 0.46s;
+	transition-timing-function: cubic-bezier( 0,0.5, 1,1);/* 过渡时间贝塞尔曲线,实现非线性动画 */
+}
+
+/* 主要按钮样式 */
+.main-button{
+	margin: 5px 0 0 5px;
+	width: 36px;
+	height: 36px;
+	background-color: rgba(255, 195, 35,1);
+	border-radius: 50%;
+	box-shadow:2px 2px 3.3px rgba(0, 0, 0, 0.5), inset  -2px -3.3px 2px -2px rgba(0, 0, 0, 0.5), inset  2.6px 3.3px 1.3px -1.3px rgba(255, 230, 80,1);
+	cursor: pointer;
+	transition: 0.66s;
+	transition-timing-function: cubic-bezier(0.37, 0.9, 0.34, 0.66); /* 加入回弹动画 */
+}
+
+/* 陨石坑样式 */
+.moon{
+	position: absolute;
+	background-color: rgba(150, 160, 180, 1);
+	box-shadow:inset 0px 0px 0.6px 0.6px rgba(0, 0, 0, 0.3) ;
+	border-radius: 50%;
+	transition: 0.3s;
+	opacity: 0;
+}
+
+/* 第一个陨石坑 */
+.moon:nth-child(1){
+	top: 5px;
+	left: 16.6px;
+	width: 8.3px;
+	height: 8.3px;
+}
+
+/* 第二个陨石坑 */
+.moon:nth-child(2){
+	top: 13.3px;
+	left: 5px;
+	width: 13.3px;
+	height: 13.3px;
+}
+
+/* 第三个陨石坑 */
+.moon:nth-child(3){
+	top: 21.6px;
+	left: 21.6px;
+	width: 8.3px;
+	height: 8.3px;
+}
+
+/* 按钮背后的虚影 */
+.daytime-backgrond {
+	position: absolute;
+	border-radius: 50%;
+	transition: 0.66s;
+	transition-timing-function: cubic-bezier(0.37, 0.9, 0.34, 0.66); /* 加入回弹动画 */
+}
+
+/* 按钮背后的第一个虚影 */
+.daytime-backgrond:nth-child(2){
+	top: -13.3px;
+	left: -13.3px;
+	width: 73.3px;
+	height:73.3px;
+	background-color: rgba(255, 255, 255,0.2);
+	z-index: -2;
+}
+
+/* 按钮背后的第二个虚影 */
+.daytime-backgrond:nth-child(3){
+	top: -21.6px;
+	left: -11.6px;
+	width: 90px;
+	height:90px;
+	background-color: rgba(255, 255, 255,0.1);
+	z-index: -3;
+}
+
+/* 按钮背后的第三个虚影 */
+.daytime-backgrond:nth-child(4){
+	top: -30px;
+	left: -10px;
+	width: 106.6px;
+	height:106.6px;
+	background-color: rgba(255, 255, 255,0.05);
+	z-index: -4;
+}
+
+/* 云和云层虚影的初始位置 */
+.cloud,.cloud-light{
+	transform: translateY(6.6px);
+	transition: 0.66s;
+	transition-timing-function: cubic-bezier(0.37, 0.9, 0.34, 0.66); /* 加入回弹动画 */
+}
+
+/* 云和虚影统一样式 */
+.cloud-son{
+	position: absolute;
+	background-color: #fff;
+	border-radius: 50%;
+	z-index: -1;
+	transition-property: transform;
+	transition-duration: 4s; /* 云层浮动动画效果，过渡时间4s */
+}
+
+
+/* 云和虚影由6个圆形组成，第1个圆形和第7个圆形大小相同 */
+.cloud-son:nth-child(6n+1){
+	right: -13.3px;
+	bottom: 6.6px;
+	width: 33.3px;
+	height: 33.3px;
+}
+
+/* 云和虚影由6个圆形组成，第2个圆形和第8个圆形大小相同 */
+.cloud-son:nth-child(6n+2) {
+	right: -6.6px;
+	bottom: -16.6px;
+	width: 40px;
+	height: 40px;
+}
+
+/* 云和虚影由6个圆形组成，第3个圆形和第9个圆形大小相同 */
+.cloud-son:nth-child(6n+3) {
+	right: 13.3px;
+	bottom: -26.6px;
+	width: 40px;
+	height: 40px;
+}
+
+/* 云和虚影由6个圆形组成，第4个圆形和第10个圆形大小相同 */
+.cloud-son:nth-child(6n+4) {
+	right: 33.3px;
+	bottom: -23.3px;
+	width: 40px;
+	height: 40px;
+}
+
+/* 云和虚影由6个圆形组成，第5个圆形和第11个圆形大小相同 */
+.cloud-son:nth-child(6n+5) {
+	right: 50px;
+	bottom: -40px;
+	width: 50px;
+	height: 50px;
+}
+
+/* 云和虚影由6个圆形组成，第6个圆形和第12个圆形大小相同 */
+.cloud-son:nth-child(6n+6) {
+	right: 73.3px;
+	bottom: -33.3px;
+	width: 40px;
+	height: 40px;
+}
+
+/* 云层在-2层 */
+.cloud{
+	z-index: -2;
+}
+
+/* 云层虚影在云层下方,并且整体上移,逆时针旋转5度 */
+.cloud-light{
+	position: absolute;
+	right: 0px;
+	bottom: 25px;
+	opacity: 0.5;
+	z-index: -3;
+	/*transform: rotate(-5deg);*/
+}
+
+
+/* 所有星星样式 */
+.stars{
+	transform: translateY(-83.3px);
+	z-index: -2;
+	transition: 0.6s;
+	transition-timing-function: cubic-bezier(0.37, 0.9, 0.34, 0.66); /* 加入回弹动画 */
+}
+
+/* 大星星的宽高 */
+.big {
+	--size: 5px;
+}
+
+/* 中星星的宽高 */
+.medium {
+	--size: 3.3px;
+}
+
+/* 小星星的宽高 */
+.small {
+	--size: 2px;
+}
+
+/* 星星绝对定位 */
+.star {
+	position: absolute;
+	width: calc(2*var(--size));
+	height: calc(2*var(--size));
+}
+
+/* 所有星星的位置 */
+.star:nth-child(1){
+	top: 6.6px;
+	left: 26.6px;	
+}
+
+.star:nth-child(2){
+	top: 13.3px;
+	left: 63.3px;	
+}
+
+.star:nth-child(3){
+	top: 13.3px;
+	left: 13.3px;	
+}
+
+.star:nth-child(4){
+	top: 23.3px;
+	left: 33.3px;	
+}
+
+.star:nth-child(5){
+	top: 33.3px;
+	left: 53.3px;	
+}
+
+.star:nth-child(6){
+	top: 33.3px;
+	left: 13.3px;	
+}
+
+.star:nth-child(7){
+	top: 26.6px;
+	left: 18.3px;	
+}
+
+.star:nth-child(8){
+	top: 36.6px;
+	left: 30px;	
+}
+
+.star:nth-child(9){
+	top: 13.3px;
+	left: 50px;	
+}
+
+.star:nth-child(10){
+	top: 21.6px;
+	left: 45px;	
+}
+
+.star:nth-child(11){
+	top: 26.6px;
+	left: 63.3px;	
+}
+
+/* 每一个星星由四个div向左浮动,拼合而成 */
+.star-son{
+	float: left;
+}
+
+.star-son:nth-child(1) {
+	--pos: left 0;
+}
+
+.star-son:nth-child(2) {
+	--pos: right 0;
+}
+
+.star-son:nth-child(3) {
+	--pos: 0 bottom;
+}
+
+.star-son:nth-child(4) {
+	--pos: right bottom;
+}
+
+/* 星星样式 */
+.star-son {
+	width: var(--size);
+	height: var(--size);
+	background-image: radial-gradient(circle var(--size) at var(--pos), transparent var(--size), #fff);
+}
+
+/* 将星星闪烁动画应用于所有的star元素 */
+.star{
+	transform: scale(1);
+    transition: transform 0.5s;
+}
+
+/* 添加星星闪烁动画 */
+.twinkle {
+     transform: scale(0);
+}
+/****************************************动态搜索框******************************************************/
+.searchBar{
+	width:40rem;
+	height:4rem;
+	background-color:#707070;
+	box-shadow:0 0 10px rgba(0,0,0,.4);
+	border-radius:6rem;
+	position:absolute;
+	top:1.4rem;
+	right:20rem;
+	overflow:hidden;
+	transition:.5s;
+}
+
+.icon1{
+	width:6rem;
+	height:4rem;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	cursor:pointer;
+}
+.textInput{
+	width:32rem;
+	height:4rem;
+	position:absolute;
+	top:0.2rem;
+	left:6rem;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	}
+.textInput input{
+	width:100%;
+	height:100%;
+	border:none;
+	outline:none;
+	font-size:1.8rem;
+	background-color:#707070;
+	color:#292828;}
+.textInput input::-webkit-input-placeholder {
+    color:#292828;
+}                               /*********修改placeholder字体颜色*************/
+.clear{
+	width:1.5rem;
+    height:1.5rem;
+    position:absolute;
+    right:22%;
+    top:50%;
+    transform:translateY(-50%);
+    cursor:pointer;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.goBtn{
+	width:12%;
+	height:60%;
+	position:absolute;
+	top:20%;
+	right:0;
+	border-radius:8px;
+	outline:none;
+	border:1px solid #292828;
+	color:#292828;
+	box-shadow:0 0 2px rgba(0,0,0,.4);
+	background-color:#707070;
+	cursor:pointer;}
+.searchBar{width:60px;}
+.changeWidth{width:400px;}		
+/****************************************3D轮播卡片***************************************/
+section{
+	height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    background-size:cover;
+}
+.container{
+	width:60rem;
+	height:35rem;                /*增加立体效果*/
+	margin-top:-26rem;
+	position:fixed;
+	perspective:100rem;
+}
+.card-box{
+	width:100%;
+    height:100%;
+    transform-style:preserve-3d;
+    transform:rotateY(0) translateZ(-70rem);
+		  }
+.card{
+	position:absolute;
+	left:0;
+	top:0;
+	width:50rem;
+	height:20.1rem;
+}
+.card img{
+	width:100%;
+	height:100%;
+	border-radius:10px;}
+.card:nth-child(1){
+	transform:
+	   rotateY(0) translateZ(700px);}
+.card:nth-child(2){ 
+	transform:
+	   rotateY(72deg) translateZ(700px);}
+.card:nth-child(3){
+	transform:
+	   rotateY(144deg) translateZ(700px);}
+.card:nth-child(4){
+	transform:
+	   rotateY(216deg) translateZ(700px);}
+.card:nth-child(5){
+	transform:
+	   rotateY(288deg) translateZ(700px);}
+@keyframes cardRotate{
+	0%,17%{
+		transform:translateZ(-850px) rotateY(0);}
+	34%{
+		transform:translateZ(-850px) rotateY(-72deg);}
+    50%{
+		transform:translateZ(-850px)  rotateY(-144deg);}
+	66%{
+		transform:translateZ(-850px)  rotateY(-216deg);}
+	83%{
+		transform:translateZ(-850px)  rotateY(-288deg);}
+	100%{
+		transform:translateZ(-850px)  rotateY(-360deg);}
+}
+.card-box{
+	animation:cardRotate 10s cubic-bezier(0.77,0,0.175,1) infinite /* number(次数)、infinite(无限循环) */;} 				/*基于贝塞尔曲线，设计动画*/
+.card{ -webkit-box-reflect:below 15px -webkit-linear-gradient(transparent 50%,rgba(255,255,255,0.3));} 					 /*添加倒影效果*/
+
+/*********************************************************************歌单列表***************************************************/
+.list{
+	width:82%;
+	height:1000px;
+	box-shadow:0 30px -100px 10px #505f6e;
+	margin-top:-26%;
+	border-radius:15px;
+	backdrop-filter:blur(200px);
+	position:relative;
+	z-index:0;
+}
+#lists {
+	width: 75%;
+	height: 725px;
+	margin-left: 7%;
+	position: absolute;
+}
+.lists{
+	position:absolute;
+	border-radius:8%;
+    z-index:1;
+	box-shadow:5px 5px 3.5px #231f1f;
+	margin-left: 2%;
+}
+.list .child01{
+	top:10px;
+	left:40px;
+}
+.list .child02{
+	top:10px;
+	left:280px;
+}
+.list .child03{
+	top:10px;
+	left:520px;
+}
+.list .child04{
+	top:10px;
+	left:760px;
+}
+.list .child05{
+	top:10px;
+	left:1000px;
+}
+.list .child06{
+	top:250px;
+	left:40px;
+}
+.list .child07{
+	top:250px;
+	left:280px;
+}
+.list .child08{
+	top:250px;
+	left:520px;
+}
+.list .child09{
+	top:250px;
+	left:760px;
+}
+.list .child10{
+	top:250px;
+	left:1000px;
+}
+.list .child11{
+	top:490px;
+	left:40px;
+}
+.list .child12{
+	top:490px;
+	left:280px;
+}
+.list .child13{
+	top:490px;
+	left:520px;
+}
+.list .child14{
+	top:490px;
+	left:760px;
+}
+.list .child15{
+	top:490px;
+	left:1000px;
+}
+img{border-radius:8%;}
+
+.list .lists:hover .vs{
+	opacity: 1;
+	transition-delay: 0.3s;
+}
+
+.list .lists:hover .imgs{
+	transform: translateY(-12.7px);
+} 
+.list .lists:hover p {  
+    visibility: hidden; /* 隐藏内容，但保留空间 */  
+    pointer-events: none; /* 禁止鼠标交互 */  
+    opacity: 0; /* 完全透明 */  
+	/*transform: translateY(-12.5px);*/
+    transition: opacity 0s ease, visibility 0s linear 0.3s; /* 透明度平滑过渡，延迟显示隐藏 */  
+}
+.list .lists:hover{
+	height: 157px;
+	transition: transform 0.5s ease;
+}
+
+
+.vs{
+	position:absolute;
+    top:-12.5px;
+	left:0px;
+	height:170px;;
+	width:170px;
+	background:rgba(0,0,0,0.5) url(../images/play.png) no-repeat center center;
+	opacity: 0;
+	z-index:2;
+	transition: opacity 0.3s ease;
+	border-radius:8%;
+}
+.list #lists p{
+	font-size:14px;
+	color:#fff;
+	margin-left: 15px;
+	}
+.list hr{
+	position:absolute;
+    top:740px;
+    width:100%;
+    size:2px;
+    color:#707070;
+    }
+/*********************************************************************动态侧边栏*************************************************************/
+.nav {
+    width: 110px;            /*110px*/
+	position:fixed;
+	top:62px;
+	right: 0%;
+    height: 710px;
+	opacity:1;
+    border-radius: 7px 0px 0px 7px;
+    overflow: hidden;
+    transition: 0.5s;
+    background: rgba(255, 255, 255, 0.2);                      /* 半透明背景色 */  
+    backdrop-filter: blur(15px); /* 模糊效果 */ 
+}                                      /*           主体             */
+
+.nav:hover {
+    width: 280px;
+	transform:translateX(0px);
+}
+
+.icon {
+    width: 250px;
+    height: 60px;
+    margin-left: 25px;
+    margin-top: 20px;
+    display: flex;
+}
+.icon p{
+    font-size:18px;
+    font-weight:bold;
+}
+.icon-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 8%;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    overflow: hidden;
+}
+
+.icon-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 3%;
+    object-fit: cover;
+}
+
+.icon-con {
+    height: 60px;
+    margin-left: 25px;
+}
+
+.icon-con p {
+    padding-top: 5px;
+}
+
+.icon-con h2 {
+    font-weight: 400;
+}
+
+.line {
+    width: 60px;
+    height: 1px;
+    background: rgba(245, 253, 255, 0.5);
+    margin: 20px 25px;
+    transition: 0.5s;
+}
+
+.nav:hover .line {
+    width: 230px;
+}
+
+.title {
+    width: 60px;
+    margin-left: 25px;
+    margin-bottom: 20px;
+}
+
+.title p {
+    font-size: 14px;
+}
+
+.menu {
+    width: 230px;
+    margin-left: 25px;
+}
+/*****************2级侧边栏*************************/
+.item .Level_2{
+    border-radius: 8px 0px 0px 8px;    
+    height: 590px;    
+    padding: 10px 0px;    
+    position: absolute; 
+    background-color: rgba(176,184,193,0.8);
+    width: 0px; 
+    right: -40px; 
+    overflow: hidden; 
+    transition: 0.5s;
+    z-index: 2;
+}
+/*.item:hover .Level_2{    
+    width: 215px;    
+}*/
+.Sidebar_font{                                    /*2级侧边栏介绍文字*/
+    align-content: center;
+    margin-left: 15px;
+    font-size: 25px;
+    line-height: 50px;
+}
+
+.item li{
+    height: 50px;
+    letter-spacing: 1.5px;    
+    font-size: 15px;
+    font-weight: 450; 
+    align-content: center;
+    padding-left: 15px;    
+    /* 动画过渡 */   
+    cursor:pointer;        /*鼠标为手指*/
+    transition: 0.5s;
+    list-style-type: none;
+    white-space: nowrap;     /*禁止换行*/
+}
+/*****************Files************************/
+.item .Files{
+    top: -62px;  
+}
+.Files li:hover{
+    background-color: rgba(118,127,135,0.80);
+}
+/***********************Chat***************************/
+.item .Chat{
+    top: -112px;  
+}
+.Chat li:hover{
+    background-color: rgba(118,127,135,0.80);
+}
+
+/**********************Videos******************************/
+
+.item .Videos{
+    top: -162px;  
+}
+
+.Videos li:hover{
+    background-color: rgba(118,127,135,0.80);
+}
+
+/***********************Collect********************************/
+.item .Collect{
+    top: -212px;  
+}
+
+.Collect li:hover{
+    background-color: rgba(118,127,135,0.80);
+}
+/***********************Search*********************************/
+.item .Search{
+    top: -262px;  
+}
+
+.Search li:hover{
+    background-color: rgba(118,127,135,0.80);
+}
+/***********************Share**********************************/
+.item .Share{
+    top: -312px;  
+}
+
+.Share li:hover{
+    background-color: rgba(118,127,135,0.80);
+}
+
+
+
+.Sidebar_height{
+    height: 50px;
+}
+
+
+
+
+
+
+
+
+
+.item {
+    display: flex;
+    position: relative;
+    transition: 0.5s;
+    border-radius: 6px;
+}
+.item:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.licon {
+    width: 60px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.con {
+    width: 0px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    overflow: hidden;
+    position: relative;
+    top: -50px;
+    left: 30px;
+    opacity: 0;
+}
+
+.nav:hover .con {
+    width: 70px;
+    margin-left: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+}
+
+.ricon {
+    width: 0px;
+    height: 50px;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    opacity:0;
+}
+
+.nav:hover .ricon {
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+}
+
+a{text-decoration:none;}
+.iconfont {
+    font-size: 26px;
+}
+
+.ricon .iconfont {
+    font-size: 20px;
+    color: #62cb44;
+}
+
+.light {
+    width: 6px;
+    height: 50px;
+    background: #eb5a56;
+    position: absolute;
+    left: -25px;
+    transition: 0.5s;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    opacity: 0;
+}
+
+.item:hover .light {
+    opacity: 1;
+}
+
+.serve {
+    width: 60px;
+    /*    background: rgba(98, 203, 68, 0.5);*/
+    /*background: 15171a;*/
+    margin-left: 25px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.nav:hover .serve {
+    width: 230px;
+}
+/******************************************************************************************************************************************/
+
+
+

@@ -1,0 +1,261 @@
+        *{margin:0; padding:0; transition: 0.7s; list-style: none;}
+        body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: linear-gradient(to right,#000000,#737373);
+            color: #a0a5a8;
+        }
+        a{
+            text-decoration:none;
+            margin: 20px 0px 0px 250px;
+            color: #a0a5a8;
+            font-size: 12px;
+            white-space: nowrap; 
+        }
+        a:hover{
+            background: linear-gradient(to right,#cdffd8,#94b9ff);
+            -webkit-background-clip: text;  
+            color: transparent;
+        }
+        input{
+            box-shadow: inset 2px 2px 4px #d1d9e6, inset -2px -2px 4px #f9f9f9;
+            transition: 0.25s ease;
+            padding-left: 10px;
+            font-size: 15px;
+            margin-top: 20px;
+            border-radius: 8px;
+            width: 350px;
+            height: 40px;
+            border: none;
+            outline: none;
+        }
+        
+        input:focus {
+            box-shadow: inset 4px 4px 4px #848B96, inset -4px -4px 4px #f9f9f9;
+        }
+        
+        button{
+            background-image: linear-gradient(to right,#cdffd8,#94b9ff);
+            border-radius: 15px;
+            cursor: pointer;
+            border: none;
+            width: 130px;
+            height: 50px;
+            font-weight: 600;
+            font-size: 15px;
+        }
+        
+        .container{
+            position: relative;
+            width: 1000px;
+            height: 600px;
+            background-color: #565656;
+            box-shadow: 10px 10px 10px #1B1B1B, -10px -10px 10px #454545;            
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .login{
+            display: flex;
+            justify-content: center;
+            width: 60%;
+            height: 600px;
+            transition: 1s ease-in;
+            position: absolute;
+            top: 0;
+        }
+        #login-in{
+            background-image: linear-gradient(to right,#000000,#454545);
+            z-index: 2;
+        }
+        #login-up{
+            z-index: 1;
+            background-image: linear-gradient(to right,#2E2E2E,#737373);
+        }
+        
+        .login h1{
+            font-size: 38px;
+            position: absolute;
+            top: 60px;
+            background: linear-gradient(to right,#cdffd8,#94b9ff);
+            -webkit-background-clip: text;  
+            color: transparent;
+        }
+       /* #login-in h1{ 
+            
+        }
+        #login-up h1{
+            font-size: 38px;
+            position: absolute;
+            top: 60px;
+            background: linear-gradient(to right,#cdffd8,#94b9ff);
+            -webkit-background-clip: text;  
+            color: transparent; 
+        }*/
+        
+        .login_form{
+            width: 360px;
+            height: 100px;
+        }
+        #login-in_form{
+            position: absolute;
+            top: 220px;
+        }
+        #login-up_form{
+            position: absolute;
+            top: 185px;
+        }
+        
+        
+        #Login_in_button{
+            margin: 60px 0px 0px 120px;
+        }
+        #Login_up_button{
+            margin: 60px 0px 0px 120px;
+        }
+        
+        
+        
+        
+        #overlay{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 39.95%;
+            height: 600px; 
+            overflow: hidden;
+            position: absolute;
+            right: 0;
+            z-index: 999;
+            transition: 1s ease-in;
+        }
+        .overlays{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            height: 600px;
+            position: absolute;
+            right: 0%;
+            transition: transform 1s ease-in;
+            overflow: hidden;
+        }
+        #overlay_signup{
+            background-image: linear-gradient(to right,#454545,#737373);
+            z-index: 1001;
+            transition: opacity 0.5s ease-in 0.5s;
+            opacity: 1;
+        }
+        
+        #overlay_signin{
+            background-image: linear-gradient(to right,#000000,#2E2E2E);
+            z-index: 1000;
+            transition: opacity 0.5s ease-in 0.5s;
+            opacity: 0;
+        }
+        
+        .Overlay_font{
+            position: absolute;
+            top: 180px;
+            width: auto;
+            height: 200px;
+            background: linear-gradient(to right,#cdffd8,#94b9ff);
+            -webkit-background-clip: text;  
+            color: transparent;
+            text-align: center;
+        }
+        .Overlay_font h1{
+            font-size: 38px;
+            margin-left: 20px;
+        }
+        
+        .toggle{                                                    
+            position: absolute;
+            top: 62%;
+        }
+        
+        #toggleToSignup{
+            z-index: 1001;
+        }
+        #toggleToSignin{
+            z-index: 1000;
+        }
+        
+        
+        #circle_1{                            /*bottom-circle*/
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            background-color: #707070;
+            box-shadow: inset 8px 8px 12px #1B1B1B, inset -8px -8px 12px #454545;
+            bottom: -32%;
+            right: -20%;
+            transition: 1s ease-in;
+            z-index: 1005;
+        }
+        #circle_2{                            /*top-circle*/    
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background-color: #707070;
+            box-shadow: inset 8px -8px 12px #1B1B1B, inset -8px -8px 12px #454545;
+            top: -40%;
+            right: 0%;
+            transition: 1s ease-in;
+            z-index: 1005;
+        }
+        
+        #circle_3{                            /*bottom-circle*/
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            background-color: #2A2A2A;
+            box-shadow: inset -8px 8px 12px #686868, inset -8px -8px 12px #454545;
+            bottom: -32%;
+            /*left: -19%;*/
+            right: 0%;
+            transition: 1s ease-in;
+            z-index: 1005;
+            overflow: hidden;
+        }
+        #circle_4{                            /*top-circle*/
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background-color: #2A2A2A;
+            box-shadow: inset 8px -8px 12px #686868, inset -8px -8px 12px #454545;
+            top: -40%;
+            right: 0%;
+            transition: 1s ease-in;
+            z-index: 1005;
+            overflow: hidden;
+        }
+        
+/******************************************自定义弹窗**************************************************************/
+#popupFrame{
+    width: 100%;
+    height: 960px;
+    border: none;  
+}
+
+#iframe-container{
+    display: none;  
+    position: fixed; /* 固定定位 */  
+    top: 0; /* 距离顶部0 */  
+    left: 0; /* 距离左侧0 */  
+    width: 100%; /* 宽度100% */  
+    height: 100%; /* 高度100% */  
+    z-index: 9999; /* 确保在最上层 */  
+ /*   background-color: white;*/ /* 可选：设置背景颜色 */  
+    margin: 0; /* 移除外边距 */  
+    padding: 0; /* 移除内边距 */  
+    border: none; /* 移除边框 */  
+    overflow: hidden; /* 隐藏溢出内容 */ 
+}       
+        
+        

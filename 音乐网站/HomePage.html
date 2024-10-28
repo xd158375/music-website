@@ -1,0 +1,431 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+<title>音乐网站</title>
+<link rel="stylesheet" href="CSS/HomePage.css" type="text/css"/>
+</head>
+
+<body>
+<!---------------------------------导航元素----------------------------------->
+<div class="header">
+	<div class="LOGO">
+		<a href="star.html">
+			<img src="images/LOGO.png" alt="LOGO">
+		</a>
+	</div>
+  	<div class="nav1"> 
+    	<a href="HomePage.html" class="a-color">首页</a>
+    	<a href="tuijian.html" class="a-color">推荐</a>
+        <a href="#" class="a-color">个性电台</a>
+        <a href="#" class="a-color">歌手</a>
+        <a href="Personal.html" class="a-color">我的</a>
+	</div>
+  	<div class="signin">
+    	<a href="Sign in.html" class="a-color">登录</a>
+    	<span>||</span>
+    	<a href="Sign up.html" class="a-color">注册</a>
+ 	 </div>
+<!-------------------------------------------------白天黑夜切换按钮---------------------------------------------->
+<div class="components">
+		<!-- 组件所有元素 -->
+			<div class="main-button">
+				<!-- 按钮主体(圆) -->
+				<div class="moon"></div>
+				<div class="moon"></div>
+				<div class="moon"></div>
+				<!-- 月亮上的陨石坑 -->
+			</div>
+			<div class="daytime-backgrond"></div>
+			<div class="daytime-backgrond"></div>
+			<div class="daytime-backgrond"></div>
+			<!-- 按钮底层的三个虚影 -->
+			<div class="cloud">
+				<!-- 所有的云 -->
+				<div class="cloud-son"></div>
+				<div class="cloud-son"></div>
+				<div class="cloud-son"></div>
+				<div class="cloud-son"></div>
+				<div class="cloud-son"></div>
+				<div class="cloud-son"></div>
+			</div>
+			<div class="cloud-light cloud-float">
+				<!-- 云的虚影 -->
+				<div class="cloud-son"></div>
+				<div class="cloud-son"></div>
+				<div class="cloud-son"></div>
+				<div class="cloud-son"></div>
+				<div class="cloud-son"></div>
+				<div class="cloud-son"></div>
+			</div>
+			<div class="stars">
+				<!-- 所有星星，每一个星星由四个div拼合而成 -->
+				<div class="star big">
+					<div class="star-son"></div>
+					<div class="star-son"></div>
+					<div class="star-son"></div>
+					<div class="star-son"></div>
+				</div>
+				<div class="star big">
+					<div class="star-son"></div>
+					<div class="star-son"></div>
+					<div class="star-son"></div>
+					<div class="star-son"></div>
+				</div>
+				<div class="star medium">
+					<div class="star-son"></div>
+					<div class="star-son"></div>
+					<div class="star-son"></div>
+					<div class="star-son"></div>
+				</div>
+				<div class="star medium">
+					<div class="star-son"></div>
+					<div class="star-son"></div>
+					<div class="star-son"></div>
+					<div class="star-son"></div>
+				</div>
+				<div class="star medium">
+					<div class="star-son"></div>
+					<div class="star-son"></div>
+					<div class="star-son"></div>
+					<div class="star-son"></div>
+				</div>
+				<div class="star small">
+					<div class="star-son"></div>
+					<div class="star-son"></div>
+					<div class="star-son"></div>
+					<div class="star-son"></div>
+				</div>
+				<div class="star small">
+					<div class="star-son"></div>
+					<div class="star-son"></div>
+					<div class="star-son"></div>
+					<div class="star-son"></div>
+				</div>
+				<div class="star small">
+					<div class="star-son"></div>
+					<div class="star-son"></div>
+					<div class="star-son"></div>
+					<div class="star-son"></div>
+				</div>
+				<div class="star small">
+					<div class="star-son"></div>
+					<div class="star-son"></div>
+					<div class="star-son"></div>
+					<div class="star-son"></div>
+				</div>
+				<div class="star small">
+					<div class="star-son"></div>
+					<div class="star-son"></div>
+					<div class="star-son"></div>
+					<div class="star-son"></div>
+				</div>
+				<div class="star small">
+					<div class="star-son"></div>
+					<div class="star-son"></div>
+					<div class="star-son"></div>
+					<div class="star-son"></div>
+				</div>
+			</div>
+		</div>
+		
+<!---------------------------------------------------动态搜索框------------------------------------------------->
+<div class="searchBar">
+    <div class="icon1">
+    <img src="images/search.png" alt="搜索">
+    </div>
+    <div class="textInput">
+      	<input class="inp" type="text" placeholder="请输入搜索关键字">
+      	<button class="goBtn">GO</button>
+      	<div class="clear">
+		  	<img src="images/close.png" alt="关闭">
+		</div>
+    </div>
+  </div>   <!-- 整个容器分成2部分搜索图标和展开区域 -->
+  	
+</div>
+<!-------------------------------3D轮播卡片----------------------------------->
+<section>
+	<div class="container">
+    	<div class="card-box">
+      		<div class="card"><img src="images/1.png" alt="图1"></div>
+      		<div class="card"><img src="images/2.png" alt="图2"></div>
+     		<div class="card"><img src="images/3.png" alt="图3"></div>
+     		<div class="card"><img src="images/4.png" alt="图4"></div>
+      		<div class="card"><img src="images/5.png" alt="图5"></div>
+   		</div>
+  	</div>
+</section>
+<!----------------------------------------------------------歌单列表------------------------------------------------------>
+<div class="list">
+	<div id="lists">
+		<div class="child01 lists">
+			<a href="#">
+		    	<img src="images/list/images (1).png" alt="歌单1" class="imgs">
+		    	<span class="vs"></span>
+				<p>用最温柔的声音，唱着<br>最伤感的歌</p>
+			</a>
+	  	</div>
+	  	<div class="child02 lists">
+			<a href="#">
+                <img src="images/list/images (2).png" alt="歌单2" class="imgs">
+                <span class="vs"></span>
+				<p>kpop随舞室ミ★魅力制<br>燥slay全场</p>    
+			</a>
+	  	</div>
+	    <div class="child03 lists">
+	  		<a href="#">
+				<img src="images/list/images (3).png" alt="歌单3" class="imgs">
+                <span class="vs"></span>
+				<p>明天也早起。<br>&nbsp;</p>
+			</a>
+	    </div>
+	    <div class="child04 lists">
+            <a href="#">
+                <img src="images/list/images (4).png" alt="歌单4" class="imgs">
+                <span class="vs"></span>
+                <p>唐吉诃德史诗氛围KPO<br>P美学</p>
+            </a>
+	 	</div>
+	    <div class="child05 lists">
+            <a href="#">
+                <img src="images/list/images (5).png" alt="歌单5" class="imgs">
+                <span class="vs"></span>
+                <p>听了会哭，我们的爱在<br>无声中谢幕</p>
+            </a>
+	  	</div>
+	  	<div class="child06 lists">
+            <a href="#">
+                <img src="images/list/images (6).png" alt="歌单6" class="imgs">
+                <span class="vs"></span>
+                <p>玩家催泪曲！忆游戏剧<br>情动容!</p>
+            </a>
+	  	</div>
+	  	<div class="child07 lists">
+            <a href="#">
+                <img src="images/list/images (7).png" alt="歌单7" class="imgs">
+                <span class="vs"></span>
+                <p>韩嗓低吟：领略夜幕下<br>的首尔温情</p>
+            </a>
+	  	</div>
+	  	<div class="child08 lists">
+			<a href="#">
+                <img src="images/list/images (8).png" alt="歌单8" class="imgs">
+                <span class="vs"></span>
+                <p>【欧美伤感】悲情黒夜<br>灼刻泪眼</p>
+			</a>
+	  	</div>
+	  	<div class="child09 lists">
+			<a href="#">
+                <img src="images/list/images (9).png" alt="歌单9" class="imgs">
+                <span class="vs"></span>
+                <p>回忆只能怀念，爱也不<br>能重演</p>
+			</a>
+	  	</div>
+	  	<div class="child10 lists">
+			<a href="#">
+                <img src="images/list/images (10).png" alt="歌单10" class="imgs">
+                <span class="vs"></span>
+                <p>忧郁Alternative◎拥抱<br>孤寂灵魂</p>
+			</a>
+	  	</div>
+	  	<div class="child11 lists">
+			<a href="#">
+                <img src="images/list/images (11).png" alt="歌单11" class="imgs">
+                <span class="vs"></span>
+                <p>好歌献给你：乍见心喜 <br>久听不腻</p>
+			</a>
+	  	</div>
+	  	<div class="child12 lists">
+			<a href="#">
+                <img src="images/list/images (12).png" alt="歌单12" class="imgs">
+                <span class="vs"></span>
+                <p>纯爱战曲：悬溺一响<br> 纯爱登场0.8x</p>
+			</a>
+	  	</div>
+	  	<div class="child13 lists">
+			<a href="#">
+                <img src="images/list/images（13）.png" alt="歌单13" class="imgs">
+                <span class="vs"></span>
+                <p>超好听的温柔emo歌曲<br>&nbsp;</p>
+			</a>
+	  	</div>
+	  	<div class="child14 lists">
+			<a href="#">
+                <img src="images/list/images（14）.png" alt="歌单14" class="imgs">
+                <span class="vs"></span>
+                <p>&nbsp;&nbsp;网络流行歌曲<br>&nbsp;</p>
+			</a>
+	  	</div>
+	  	<div class="child15 lists">
+			<a href="#">
+                <img src="images/list/images（15）.png" alt="歌单15" class="imgs">
+                <span class="vs"></span>
+                <p>&nbsp;&nbsp;晚安<br>&nbsp;</p>
+			</a>
+	  	</div>
+	</div>
+  	<hr/>
+</div>
+
+<!------------------------------------------------------------动态侧边栏-------------------------------------------------------->
+ <div class="wrap">
+    <!---主体--->
+    <div class="nav">    
+          <!--头像-->
+            <div class="icon">
+                <div class="icon-img">
+					<img src="images/images (3).png" alt="头像" />
+				</div>
+                <div class="icon-con">
+                    <p class="a-color">美美</p>
+                    <h2 class="a-color">明天也早起</h2>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="title"> 
+                <p class="a-color">Menu</p>
+            </div>
+            <div class="menu">
+                <div class="item">
+                    <div id="Files" class="Sidebar_height">
+                        <div class="licon"><a href="#"><img src="images/wenjian.png" alt="文件"></a></div>
+                        <div class="con"><a href="#" class="a-color">Files</a></div>
+                        <div class="ricon"><span class="iconfont icon-shezhi"></span></div>  
+                    </div>
+                    <ul class="Files Level_2">
+                        <span class="Sidebar_font">Files</span>
+                        <li>戒不掉.MP3</li>
+                        <li>哪里都是你.MP3</li>
+                        <li>银河与星斗.MP3</li>
+                        <li>Payphone.MP3</li>
+                        <li>在加纳共和国离婚.MP3</li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <div id="Chat" class="Sidebar_height">
+                        <div class="licon"><a href="#"><img src="images/qipao.png" alt="聊天"></a></div>
+                        <div class="con"><a href="#" class="a-color">Chat</a></div>
+                        <div class="ricon"><span class="icosnfont icon-shezhi"></span></div>
+                    </div>
+                    <ul class="Chat Level_2">
+                        <span class="Sidebar_font">Chat</span>
+                        <li>User A</li>
+                        <li>User B</li>
+                        <li>User C</li>
+                        <li>User D</li>
+                        <li>User E</li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <div id="Videos" class="Sidebar_height">
+                        <div class="licon"><a href="#"><img src="images/shexiangtou.png" alt="视频"></a></div>
+                        <div class="con"><a href="#" class="a-color">Videos</a></div>
+                        <div class="ricon"></div>    
+                    </div>
+                    <ul class="Videos Level_2">
+                        <span class="Sidebar_font">Videos</span>
+                        <li>戒不掉.MP4</li>
+                        <li>哪里都是你.MP4</li>
+                        <li>银河与星斗.MP4</li>
+                        <li>Payphone.MP4</li>
+                        <li>在加纳共和国离婚.MP4</li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <div id="Collect" class="Sidebar_height">
+                        <div class="licon"><a href="#"><img src="images/shoucang.png" alt="收藏"></a></div>
+                        <div class="con"><a href="#" class="a-color">Collect</a></div>
+                        <div class="ricon"><span class="iconfont icon-caidan1"></span></div>
+                    </div>
+                    <ul class="Collect Level_2">
+                        <span class="Sidebar_font">Collect</span>
+                        <li>戒不掉.MP3</li>
+                        <li>哪里都是你.MP3</li>
+                        <li>银河与星斗.MP3</li>
+                        <li>Payphone.MP3</li>
+                        <li>在加纳共和国离婚.MP3</li>
+                        <li>爱你的时候.MP3</li>
+                        <li>春娇与志明.MP3</li>
+                        <li>暖风.MP3</li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <div id="Search" class="Sidebar_height">
+                        <div class="licon"><a href="#"><img src="images/search1.png" alt="搜索"></a></div>
+                        <div class="con"><a href="#" class="a-color">Search</a></div>
+                        <div class="ricon"></div>
+                    </div>
+                    <ul class="Search Level_2">
+                        <span class="Sidebar_font">Search</span>
+                        <li>戒不掉.MP3</li>
+                        <li>哪里都是你.MP3</li>
+                        <li>银河与星斗.MP3</li>
+                        <li>Payphone.MP3</li>
+                        <li>在加纳共和国离婚.MP3</li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <div id="Share" class="Sidebar_height">
+                        <div class="licon"><a href="#"><img src="images/share.png" alt="分享"></a></div>
+                        <div class="con"><a href="#" class="a-color">Share</a></div>
+                        <div class="ricon"></div>
+                    </div>
+                    <ul class="Share Level_2">
+                        <span class="Sidebar_font">Share</span>
+                        <li>戒不掉.MP3</li>
+                        <li>哪里都是你.MP3</li>
+                        <li>银河与星斗.MP3</li>
+                        <li>Payphone.MP3</li>
+                        <li>在加纳共和国离婚.MP3</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="title">
+                <p class="a-color">Sever</p>
+            </div>
+            <div class="serve">
+                <div class="item">
+                    <div id="Option" class="Sidebar_height">
+                        <div class="licon"><a href="#"><img src="images/xuanxiang.png" alt="选项"></a></div>
+                        <div class="con"><a href="#" class="a-color">Option</a></div>
+                        <div class="ricon"><span class="iconfont icon-Dashboard"></span></div>
+                    </div>
+
+                </div>
+                <div class="item">
+                    <div id="Friends" class="Sidebar_height">
+                        <div class="licon"><a href="#"><img src="images/people.png" alt="好友"></a></div>
+                        <div class="con"><a href="#" class="a-color">Friends</a></div>
+                        <div class="ricon"></div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div id="Setting" class="Sidebar_height">
+                        <div class="licon"><a href="#"><img src="images/setting.png" alt="设置"></a></div>
+                        <div class="con"><a href="#" class="a-color">Setting</a></div>
+                        <div class="ricon"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+<script src="JavaScript/Sidebar.js"></script>
+<script src="JavaScript/search.js"></script>
+</html>
